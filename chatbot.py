@@ -14,19 +14,22 @@ pairs = [
     [r"(.*)", ["I'm sorry, I didn't understand that. Could you rephrase?", "Could you please elaborate?"]]
 ]
 class RuleBasedChatbot:
-    def _init_(self, pairs):
+    def __init__(self, pairs):
         self.chat = Chat(pairs, reflections)
         
     def respond(self, user_input):
         return self.chat.respond(user_input)
-    def chat_with_bot():
+
+# Create the chatbot instance and start the chat
+chatbot_instance = RuleBasedChatbot(pairs) # Changed variable name to chatbot_instance to avoid confusion with the function name
+def chat_with_bot(chatbot_instance): # Pass the chatbot_instance to the function
      print("Hello, I am your chatbot! Type 'exit' to end the conversation.")
-    while True:
+     while True:
         user_input = input("You: ")
         if user_input.lower() == 'exit':
             print("Chatbot: Goodbye! Have a nice day!")
             break
-        response = chatbot.respond(user_input)
-        print(f"Chatbot: {response}")  
-    chatbot = RuleBasedChatbot(pairs)
-    chat_with_bot()
+        response = chatbot_instance.respond(user_input)
+        print(f"Chatbot: {response}")
+
+chat_with_bot(chatbot_instance) # Call the function with the instance
