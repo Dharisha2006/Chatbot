@@ -70,10 +70,6 @@ Chatbot: Goodbye! Have a nice day!
 - This is a **rule-based chatbot**, so its ability to understand language is limited to predefined patterns.
 - Good for learning **pattern matching**, **chatbot structure**, and **basic NLP** concepts.
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 Made with ❤️ using Python & NLTK.
